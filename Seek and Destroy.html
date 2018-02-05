@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Seek and Destroy</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function destroyer(arr) {
+    // 请把你的代码写在这里
+    var argumentsList = [];
+    for (let index = 0; index < arguments.length - 1; index++) {
+      const element = arguments[index + 1];
+      argumentsList.push(element);
+    }
+    arr = arr.filter(function (element) {
+      return argumentsList.indexOf(element) === -1;
+    });
+    return arr;
+  }
+
+  var str = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

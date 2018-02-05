@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chunky Monkey</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function chunk(arr, size) {
+    // 请把你的代码写在这里
+    var list = [];
+    for (var index = 0; index < arr.length; index += size) {
+      var strlist = arr.slice(index, index + size);
+      list.push(strlist);
+    }
+    return list;
+  }
+
+  var str = chunk(["a", "b", "c", "d"], 2);
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

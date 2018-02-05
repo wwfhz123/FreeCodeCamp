@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Truncate a string</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function truncate(str, num) {
+    // 请把你的代码写在这里
+    if (num <= 3) {
+      str = str.slice(0, num) + "...";
+    } else if (num < str.length) {
+      str = str.slice(0, num - 3) + "...";
+    } else {
+      str = str.slice(0, num);
+    }
+    return str;
+  }
+
+  var str = truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length);
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

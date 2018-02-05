@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Confirm the Ending</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function confirmEnding(str, target) {
+    // 请把你的代码写在这里
+    var strStart = str.length - target.length;
+    var lastValue = str.substr(strStart, str.length - 1);
+    if (lastValue === target) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  var str = confirmEnding("He has to give me a new name", "ame");
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

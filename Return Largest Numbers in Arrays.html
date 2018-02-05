@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Return Largest Numbers in Arrays</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function largestOfFour(arr) {
+    // 请把你的代码写在这里
+    var list = arr;
+    var result = [];
+    list.forEach(element => {
+      var value = element.sort(function (a, b) {
+        return b - a;
+      })[0];
+      result.push(value);
+    });
+    return result;
+  }
+  var str = largestOfFour([
+    [4, 5, 1, 3],
+    [13, 27, 18, 26],
+    [32, 35, 37, 39],
+    [1000, 1001, 857, 1]
+  ]);
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

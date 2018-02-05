@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Slasher Flick</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function slasher(arr, howMany) {
+    // 请把你的代码写在这里
+    for (var i = 0; i < arr.length; i++) {
+      if (i >= howMany) {
+        return arr.slice(i);
+      }else if(arr.length < howMany){
+        return [];
+      }
+    }
+    return arr;
+  }
+
+  var str = slasher([1, 2, 3], 0);
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

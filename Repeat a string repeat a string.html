@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Repeat a string repeat a string</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function repeat(str, num) {
+    // 请把你的代码写在这里
+    if(num < 1){
+      return "";
+    }else{
+      str = str.repeat(num);
+    }
+    return str;
+  }
+
+  var str = repeat("abc", 3);
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

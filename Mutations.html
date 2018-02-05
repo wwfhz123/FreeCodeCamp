@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mutations</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function mutation(arr) {
+    // 请把你的代码写在这里
+    var str1 = arr[0].toUpperCase();
+    var str2 = arr[1].toUpperCase();
+    for (var index = 0; index < str2.length; index++) {
+      const element = str2[index];
+      if (str1.indexOf(element) === -1) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  var str = mutation(["hello", "Hello"]);
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

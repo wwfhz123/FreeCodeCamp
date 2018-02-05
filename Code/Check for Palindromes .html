@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Check for Palindromes </title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function palindrome(str) {
+    // 请把你的代码写在这里
+    str = str.replace(/[\-\_\(\)\:\/\,\.\ ]/g, "");
+    str = str.toLowerCase();
+    var value = str.split("");
+    var res = value.reverse().join("").toLowerCase();
+    if (str == res) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
+
+  var str = palindrome("0_0 (: /-\ :) 0-0");
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

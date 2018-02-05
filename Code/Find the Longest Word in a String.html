@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Find the Longest Word in a String</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function findLongestWord(str) {
+    // 请把你的代码写在这里
+    var list = str.split(" ");
+    list.sort(function (a, b) {
+      return b.length - a.length;
+    });
+    return list[0].length;
+  }
+
+  var str = findLongestWord("The quick brown fox jumped over the lazy dog");
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

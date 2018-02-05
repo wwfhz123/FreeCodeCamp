@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title Case a Sentence</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function titleCase(str) {
+    // 请把你的代码写在这里
+    var newStr = str.toLowerCase().split(" ");
+    for (var i = 0; i < newStr.length; i++) {
+      newStr[i] = newStr[i].charAt(0).toUpperCase() + newStr[i].slice(1);
+    }
+    return newStr.join(" ");
+  }
+
+  var str = titleCase("I'm a little tea pot");
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

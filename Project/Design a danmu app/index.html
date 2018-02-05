@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Design a danmu app</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="app.css" />
+</head>
+
+<body>
+	<div class="box-view">
+		<div class="row screen">
+			<div class="danmu"></div>
+		</div>
+
+		<div class="row">
+			<div class="input-group">
+				<input id="danmutxt" type="text" class="form-control" placeholder="输入点文字~" aria-label="danmutxt" aria-describedby="danmutxt">
+				<div class="input-group-append">
+					<button id="btnSend" class="btn btn-primary" type="button">发送弹幕</button>
+					<button id="btnClear" class="btn btn-danger" type="button">清空弹幕</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<span id="msg" style="display: none;">请输入内容哦~</span>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+
+</html>

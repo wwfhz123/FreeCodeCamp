@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Where do I belong</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function where(arr, num) {
+    // 请把你的代码写在这里
+    arr.push(num);
+    arr.sort(function (a, b) {
+      return a - b;
+    });
+    return arr.indexOf(num);
+  }
+
+  var str = where([10, 20, 30, 40, 50], 35);
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

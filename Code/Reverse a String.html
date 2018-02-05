@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reverse a String</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function reverseString(str) {
+    // 请把你的代码写在这里
+    var list = str.split("");
+    str = list.reverse();
+    str = str.join("");
+    return str;
+  }
+
+  var str = reverseString("hello");
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

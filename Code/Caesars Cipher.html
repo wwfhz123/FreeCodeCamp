@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Caesars Cipher</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
+<script>
+  function rot13(str) { // LBH QVQ VG!
+    // 请把你的代码写在这里
+    str = str.toUpperCase();
+    var newarray = [];
+    var arr = str.split("");
+    for (let index = 0; index < arr.length; index++) {
+      const element = arr[index];
+      if(element.charCodeAt() < 65 || element.charCodeAt > 90){
+        newarray.push(element.charAt());
+      }else if(element.charCodeAt() > 77){
+        var str1 = String.fromCharCode(element.charCodeAt() - 13);
+        newarray.push(str1);
+      }else{
+        var str2 = String.fromCharCode(element.charCodeAt() + 13);
+        newarray.push(str2);
+      }
+    }
+    return newarray.join(""); 
+  }
+
+  var str = rot13("SERR PBQR PNZC"); // 你可以修改这一行来测试你的代码
+  document.getElementById("view").innerHTML = str;
+  console.log(str);
+</script>

@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.box {
+    width: 420px;
+    margin: 120px auto;
+    text-align: text-align;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-view{
+    display:none;
+}
+
+#context{
+    margin-left:10px;
+}
+
+.btn-view {
+    width: 100%;
+    margin-top: 15px;
+}
